@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html >
+  <head>
+    <meta charset="UTF-8">
+    <title>Coviam</title>    
+    
+    <link rel='stylesheet prefetch' href='css/bootstrap.min.css'>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/angular.min.js"></script>
+    <script src="js/angular-ui-router.min.js"></script>
+    
+  </head>
+  <body ng-app="gridDropApp">
+    <div class="container">
+      <div ui-view="content"></div>
+    </div>
+    
+    <script id="templates/main.html" type="text/ng-template">
+      <div ng-cloak>
+      <div class="well">
+        <div style="margin-bottom: 5px;" class="row">
+            <span class="col-md-4 text-center">
+                <label translate="main.score"></label>
+                {{ totalScore }}
+            </span>
+            <div class="col-md-4">
+               
+            </div>
+            <div class="col-md-4">
+                <button ng-click="resetGame()" class="btn btn-primary">
+                    Reset Game
+                </button>
+            </div>
+        </div>
+        <div ng-if="gameOver" class="text-center row alert alert-danger">Game Over!</div>
+    </div>
+      <div class="row">
+        <div class="col-md-6">
+            <grid-drop-square size="3" is-palette="true" content="initial" drag-target="true"></grid-drop-square>
+          <div style="clear:both"></div>
+        </div>
+       
+        <div class="col-md-6">
+            <div ng-repeat="row in contents track by $index" ng-init="x=$index">
+                <div ng-repeat="col in row track by $index" ng-init="y=$index">
+                    <grid-drop-square size="4"
+                                      grid-drop-x="x"
+                                      grid-drop-y="y"
+                                      content="contents[x][y]"
+                                      drop-target
+                                      drag-target="false">
+
+                    </grid-drop-square>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    </script>
+    <script id="templates/grid-drop-square.html" type="text/ng-template">
+      <div ng-style="{ 'background-color' : content.color }" class="{{ chosenClass }}">
+        <div class="grid-square-content">
+          <div class="grid-table">
+            <h2 class="grid-table-cell grid-drop-text-border">
+              {{ content.score }}
+            </h2>
+          </div>
+        </div>
+      </div>
+    </script>
+    <script src="js/index.js"></script>
+
+    
+    
+  </body>
+</html>

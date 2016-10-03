@@ -1,0 +1,168 @@
+.grid {
+  width: 50%;
+  border-collapse: collapse;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.grid-cell {
+  background-color: lightgrey;
+  float: left;
+}
+.grid-cell.grid-size-1 {
+  position: relative;
+  width: 100%;
+  padding-bottom: 100%;
+  border: 1px solid black;
+  display: inline-block;
+  vertical-align: top;
+}
+.grid-cell.grid-size-2 {
+  position: relative;
+  width: 50%;
+  padding-bottom: 50%;
+  border: 1px solid black;
+  display: inline-block;
+  vertical-align: top;
+}
+.grid-cell.grid-size-3 {
+  position: relative;
+  width: 33.33333%;
+  padding-bottom: 33.33333%;
+  border: 1px solid black;
+  display: inline-block;
+  vertical-align: top;
+}
+.grid-cell.grid-size-4 {
+  position: relative;
+  width: 25%;
+  padding-bottom: 25%;
+  border: 1px solid black;
+  display: inline-block;
+  vertical-align: top;
+}
+.grid-cell.grid-size-5 {
+  position: relative;
+  width: 20%;
+  padding-bottom: 20%;
+  border: 1px solid black;
+  display: inline-block;
+  vertical-align: top;
+}
+.grid-cell.grid-size-6 {
+  position: relative;
+  width: 16.66667%;
+  padding-bottom: 16.66667%;
+  border: 1px solid black;
+  display: inline-block;
+  vertical-align: top;
+}
+.grid-cell.grid-size-7 {
+  position: relative;
+  width: 14.28571%;
+  padding-bottom: 14.28571%;
+  border: 1px solid black;
+  display: inline-block;
+  vertical-align: top;
+}
+.grid-cell.grid-size-8 {
+  position: relative;
+  width: 12.5%;
+  padding-bottom: 12.5%;
+  border: 1px solid black;
+  display: inline-block;
+  vertical-align: top;
+}
+.grid-cell.grid-size-9 {
+  position: relative;
+  width: 11.11111%;
+  padding-bottom: 11.11111%;
+  border: 1px solid black;
+  display: inline-block;
+  vertical-align: top;
+}
+.grid-cell.grid-size-10 {
+  position: relative;
+  width: 10%;
+  padding-bottom: 10%;
+  border: 1px solid black;
+  display: inline-block;
+  vertical-align: top;
+}
+.grid-cell.grid-size-11 {
+  position: relative;
+  width: 9.09091%;
+  padding-bottom: 9.09091%;
+  border: 1px solid black;
+  display: inline-block;
+  vertical-align: top;
+}
+.grid-cell.grid-size-12 {
+  position: relative;
+  width: 8.33333%;
+  padding-bottom: 8.33333%;
+  border: 1px solid black;
+  display: inline-block;
+  vertical-align: top;
+}
+.grid-cell.grid-size-13 {
+  position: relative;
+  width: 7.69231%;
+  padding-bottom: 7.69231%;
+  border: 1px solid black;
+  display: inline-block;
+  vertical-align: top;
+}
+.grid-cell.grid-size-14 {
+  position: relative;
+  width: 7.14286%;
+  padding-bottom: 7.14286%;
+  border: 1px solid black;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.grid-square-content {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+}
+
+.grid-text-small {
+  font-size: 11px;
+}
+
+.grid-table {
+  display: table;
+  height: 100%;
+  width: 100%;
+}
+
+.grid-table-cell {
+  display: table-cell;
+  vertical-align: middle;
+  height: 100%;
+  width: 100%;
+}
+
+.hover {
+  border: 1px dotted black;
+}
+
+.dragged {
+  opacity: 0.25;
+  -webkit-transform: scale(0.8);
+  -moz-transform: scale(0.8);
+  -ms-transform: scale(0.8);
+  -o-transform: scale(0.8);
+}
+
+.grid-drop-text-border {
+  color: black;
+  text-shadow: -0.5px 0 white, 0 0.5px white, 0.5px 0 white, 0 -0.5px white;
+}
+
+.top-padding {
+  margin-top: 10px;
+}
